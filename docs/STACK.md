@@ -5,7 +5,7 @@
 | Tool | Purpose | Why |
 |---|---|---|
 | TypeScript (strict) | Language and type checking | Typed public API and declarations for consumers. |
-| Node.js 20+ | Runtime | Maintained LTS lines with native ES modules. |
+| Node.js 20+ | Runtime | Maintained LTS lines with native ES modules and bigint support. |
 | Vitest + `@vitest/coverage-v8` | Tests and coverage | Fast, ESM-native, runs TypeScript without a build step. |
 | Biome | Lint and format | One fast tool for both, single config file. |
 | gitleaks | Secret scanning | Standard scanner; runs locally and in CI. |
@@ -19,5 +19,4 @@
 | Jest | Needs extra transforms for ESM and TypeScript; slower. |
 | Shell scripts for gates | Not portable to Windows; the gate runner is a Node script. |
 | Bundlers (tsup, Rollup) | Unneeded for a small ESM library; `tsc` emits what is published. |
-
-Add a row whenever a dependency or tool is added or rejected.
+| Decimal or money libraries (dinero.js, currency.js) | dinero.js v2 stayed pre-release for years; currency.js uses floats. |
