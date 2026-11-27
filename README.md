@@ -1,7 +1,6 @@
 # money-decimal
 
-[![npm version](https://img.shields.io/npm/v/@trysac/money-decimal.svg)](https://www.npmjs.com/package/@trysac/money-decimal)
-[![license: MIT](https://img.shields.io/npm/l/@trysac/money-decimal.svg)](LICENSE)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
 [![CI](https://github.com/Trysac/u054-money-decimal/actions/workflows/ci.yml/badge.svg)](https://github.com/Trysac/u054-money-decimal/actions/workflows/ci.yml)
 
 Exact money arithmetic on bigint minor units with a bundled ISO 4217 table of 44 currencies, seven named rounding modes including banker's rounding, and lossless allocation by largest remainder.
@@ -12,9 +11,15 @@ JavaScript numbers cannot represent 0.1 exactly, so price, tax and split calcula
 
 ## Install
 
+Not published to npm yet. Build it from a clone, then install it from the local path:
+
 ```sh
-npm install @trysac/money-decimal
+git clone https://github.com/Trysac/u054-money-decimal.git
+cd u054-money-decimal && npm ci && npm run build
+cd ../your-project && npm install ../u054-money-decimal
 ```
+
+Imports keep the package name: `import { ... } from "@trysac/money-decimal"`.
 
 Requires Node.js 20 or newer. The package ships ES modules with TypeScript declarations.
 
